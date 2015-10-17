@@ -1,0 +1,31 @@
+Condition statements
+if
+if elase
+if else if else
+switch ternary operators
+
+<script>
+	prompt("Please enter a number", "");
+	//second param is default if user does not enter.
+
+	var userInput = Number(prompt("Please enter a number", ""));
+
+	switch(userInput) {
+	 case 1:
+	 	alert();
+	 	break;
+	 case 2:
+	 	alert();
+	 	break;
+	 default:
+	 	alert();
+	 	break;
+	}
+
+	userInput % 2 == 0 ? alert() : alert();
+	Also, we can do multiple alerts:
+	userInput % 2 == 0 ? (alert(), alert()) : alert();
+	
+	multiple if else if can be replaced too:
+	var monthnAME = userInput == 1 ? "January" : userInput == 2 ? "February" : userInput == 3 ? "March" : "Unknown Month";
+</script>
