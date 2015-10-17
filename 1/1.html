@@ -1,0 +1,104 @@
+<snippet>
+<content><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>$1</title>
+</head>
+<body>
+	<table style="border:1px solid black; font-family:Arial">
+	    <tr>
+	        <td>
+	            <b>First Name</b>
+	        </td>
+	        <td>
+	        	<input type="text" name="firstname" ID="txtFirstName">
+	        	<label for="lblFirstName" id="lblFirstName"></label>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <b>Last Name</b>
+	        </td>
+	        <td>
+	        	<input type="text" name="firstname" ID="txtLastName">
+	        	<label for="lblLastName" id="lblLastName"></label>
+
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <b>Email</b>
+	        </td>
+	        <td>
+	        	<input type="text" name="firstname" ID="txtEmail">
+	        	<label for="lblEmail" id="lblEmail"></label>
+
+	        </td>
+	    </tr>
+	    <tr>
+	        <td colspan="2">
+	            <button type="button" onclick="myFunction()">Click Me!</button>
+	        </td>
+	    </tr>
+	</table>
+	
+
+		<select id="ddlGender" onchange="ddlGenderSelectionChanged()"> 
+			<option>Male</option>
+			<option>Female</option>
+			
+		</select>
+
+
+
+	<script src="1.js"></script>
+</body>
+</html>
+</snippet>
+
+<!-- 
+Why server side validations still necessary?
+we normally put two events on button-client click and server click
+because client side js can be disabled.
+this would cause bad data in db if we have not validations on server side
+
+client side validation provide better and faster user exprience.
+reduce unnecessary client-server round trips.
+
+Several ways we can issue request to web application:
+Enter url and hit Enter: GET request to web appln
+Press button: POST request
+
+
+Disadvantage of JavaScript:
+Security:  runs on client machine
+		   malicious user can track browsing history, steal pwd.
+		   so people disable javascript.
+Browser Compatiblity: cross browser issues.
+			jQuery has made it simpler.
+			innerText property supported only in IE/Chrome not in firefox.
+			to make it happen on Firefox we have to use textContent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
