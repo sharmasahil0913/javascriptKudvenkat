@@ -82,20 +82,51 @@ Browser Compatiblity: cross browser issues.
 
 
 
+Inline vs Eternal jS:
+-Makes code reusable
+-Easy maintenance
+-Separation of concerns
+-allow multiple developer to work simultaneously
+-PERFORMANCE: External js can be cached by browser, whereas inline JS is loaded everytime page loads.
 
 
+Where should script tag be?
+If in head, example js is changing textbox background color, and textbox is still not loaded into the browser DOM(Document object model). 
+Throws null reference error in console.
 
 
+Page life cycle, when browser starts loading a web page:
+Browser starts parsing the HTML.
+iF SCRIPT tag in head, parser stops until it loads extenal javascript.
+script downloading, page parsing stopped.
+several scripts could hamper page load.
 
+Use script tag just before closing body so it doesnt block HTML parser.
 
+Modern browser supports async and defer attributes on scripts. Browser continue parsing while scripts are being downloaded.
 
+Better to place script tag just before closing body tag.
+because
+according to http/1.1 specs browsers download no more than two components in parallel. So if page has several images to download and if script tag is at top of the page, script files start to download first which blocks the images download which adds to page load time.
 
+JS BASICS:
+-Case sensitive (using Alert would throw uncaught reference error)
+-Comments: // and /*
+-DataTypes
+Numbers- 5, 5.453
+Boolean- true/false
+String- "MyString", 'MyString'
 
+To create variable, we use var keyword.no need for int, string as in c#
+var a=10;
+var b="MyString"
 
+Dynamically typed language: data types converted automatically as needed during the script execution. Same var can be used to store int first and then a string.
 
-
-
-
++ with 2 numbers: add those numbers
++ with 2 strings: concatenates strings
++ with string and number: converts numeric to string and concatenates
+- with string and number: converts string to numeric
 
 
 

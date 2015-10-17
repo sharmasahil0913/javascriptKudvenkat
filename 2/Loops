@@ -1,0 +1,60 @@
+Loops in Javascript:
+while
+do while
+for
+
+var target=Number(prompt("enter target number"));
+var start=0;
+while(start<=target){
+	document.write(start + "<br/>"");
+	start=start+2;
+}
+break and continue statement
+
+
+
+do while
+var userChoice="";
+
+do
+{
+	var target=Number(prompt("enter target number"));
+	var start=0;
+	while(start<=target){
+		document.write(start + "<br/>"");
+		start=start+2;
+	}
+	do{
+		userChoice=prompt("Do you want to continue - Yes or no");
+
+		if(userChoice != "Yes" && userChoice != "No"){
+			alert("Invalid choice");
+		}	
+	} while(userChoice != "Yes" && userChoice != "No");
+}while(userChoice == "Yes");
+
+
+
+for loop
+for(var start=0; start<=target;start=start+2)	{
+	
+}
+
+OR
+var start=0;
+for(; ;)
+{
+	if(start > target){
+		break;
+	}
+	document.write(start + "<br/>");
+	start=start+2;
+}
+
+
+
+
+
+
+
+
