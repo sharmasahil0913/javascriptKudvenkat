@@ -1,0 +1,100 @@
+/*FUNCTIONS IN JAVASCRIPT
+<script>
+	function addNumber(firstNum, secondNum){
+		var sum=firstNum+secondSum;
+		return sum;
+	}
+	var result = addNumber(10,20);
+	document.write(result);
+</script>
+
+	PARAMS values not specified are set to UNDEFINED.
+	if we do addNumber(10);
+	secondNum is UNDEFINED.
+	10+UNDEFINED=NAN(Not a number);
+
+	Extra params are ignored:
+	addNumbers(10,20,30,40);
+	30, 40 are ignored.
+
+	iF NOThing is returned from function, undefined is returned automatically.
+
+
+
+	Different ways of defining functions:
+
+	Defining JS function using function declaration:
+	//Defining function first and then calling it
+	function addNumbers(firstNum, secondNum)
+	{
+		var result=firstNum+secondNum;
+		return result;
+	}
+	var sum = addNumbers(10, 20);
+
+	//Defining function after calling it
+	var sum = addNumbers(10, 20);
+	function addNumbers(firstNum, secondNum)
+	{
+		var result=firstNum+secondNum;
+		return result;
+	}
+	
+	This works with function definition after the function call.
+
+	FUNCTION HOISTING: JS moves all fn declarations to the top of current scope.
+
+
+
+	Defining JS function using function expression:
+	Anonymous function expression
+	var add=function(firstNumber, secondNumber){
+		var result=firstNumber+secondNumber;
+		return result;
+	}
+	var sum=add(10,20);
+	fn defined using fn expression are NOT HOISTED.
+	If call is up than fn definition, we get add is undefined when we try to call it.
+
+
+	Named function expression: Similar to anonymous fn expr but instead of assigning the variable to an anonymous fn, we are assigning it to a named function.
+	var factorial=function computeFactorial(number){
+		if(number <=1){
+			return 1;
+		}
+		return number*computeFactorial(number-1);
+	}
+
+	var result=factorial(5);
+	The name of the function is available only within the same function. if use computeFactorial outside fn, it raiss undefined error.
+
+	Useful for recursive functions.
+
+
+Self invoking/Immediately invoked/Self executing anonymous function expression:
+var result = (function computeFactorial(number){
+		if(number <=1){
+			return 1;
+		}
+		return number*computeFactorial(number-1);
+	})(5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
