@@ -1,0 +1,32 @@
+slideShow
+
+<image src="/Images/1.jpg" id="image" style="height:150px; width: 150px" />
+<input type="button" value="Start slide show" onclick="changeImage()" />
+<input type="button" value="Stop slide show" />
+
+<script>
+	
+	var intervalId;
+
+	function startSlideShow(){
+		intervalId = setInterval(changeImage, 500);
+	}
+
+	function stopSlideShow(){
+		clearInterval(intervalId);
+	}
+
+	function changeImage()
+	{
+		var imageSrc = document.getElementById("image").getAttribute("src");
+		var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf("/") + 1, imageSrc.lastIndexOf("/") + 2);
+
+		if(currentImageNumber == 8){
+			currentImageNumber=0;
+		}
+
+		var newImage="/Images/" + (Number(currentImageNumber) + 1) + ".jpg";
+		document.getElementById("image").setAttribute("src", newImage);
+	}
+
+</script>
