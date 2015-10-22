@@ -1,0 +1,77 @@
+<snippet>
+<content><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>$1</title>
+</head>
+<body>
+
+	<script>
+
+	</script>
+
+</body>
+</html>
+</snippet>
+
+
+<!--
+new Date()
+if date() constructor is used w/o any args, it return the current date and time.
+
+Create date object with specific dates:
+1. var dateOfBirth = new Date("January 13, 1980 11:20:00");
+
+Create date using number for year, month, day, hours, minutes, second & ms
+2. var dateOfBirth = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+
+var dob = new Date(1980, 0, 13, 11, 20, 0, 0);
+//js month starts from 0.
+january is 0 instead of 1.
+
+var monthnumber = dob.getMonth();
+
+function getMonthName(monthnumber)
+{
+	var monthNames = ["January", "February", ... ];
+	return monthNames[monthNumber];
+}
+
+getFullYear(), getMonth(), getDate(), getDay(), getHours(), getMinutes(), getSeconds(), getMilliseconds()
+
+day name similar to month name, starts from Sunday(0)
+
+function getDayName(dayNumber)
+{
+	var dayNames = ["Sunday", "Monday", ... ];
+	return dayNames[dayNumber];
+}
+
+Convert date to dd/mm/yyyy format:
+function formatDate(date)
+{
+	var day = date.getDate();
+	if(day<10)
+	{
+		day = "0" day;
+	}
+
+	var month = date.getMonth() + 1;
+	if(month < 10)
+	{
+		month = "0" + month;
+	}
+
+	var year = date.getFullYear();
+	return day + "/" + month + "/" + year;
+	
+}
+
+
+
+
+
+
+
+-->

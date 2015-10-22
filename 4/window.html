@@ -1,0 +1,43 @@
+<snippet>
+<content><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>$1</title>
+</head>
+<body>
+
+	<script>
+		window.onerror = function(msg, url, line){
+			alert(msg + url + line);
+			return true;// suppress bottom error on browsers.
+		}
+
+		NonExistingFunction();
+	</script>
+
+</body>
+</html>
+</snippet>
+
+
+<!--
+UNHANDLED EXCEPTION: if error raised by statement not inside try catch block, the onerror is fired.
+
+assign function to window.onerror event that you want to execute when an error is raised. 
+
+The fn that is associated as the event handler for the onerror event has three parameters:
+message: Specifies the error message
+URL: Specifies the location of the file where error occured
+line: Specifies line number where the error occurred.
+
+
+On error also exists for HTML elements.
+<IMG SRC="NonExistingImage.jpg" onerror="imageErrorHandler()">
+
+	function imageErrorHandler()
+	{
+		alert("There is a problem loading the image");
+	}
+
+-->
