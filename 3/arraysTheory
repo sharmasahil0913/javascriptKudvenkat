@@ -1,0 +1,186 @@
+function arrays()
+{	  
+	var emptyArray = [];
+	alert(emptyArray.length);
+
+	//another way to create array: Array constructor
+	var myArray=new Array(10);
+	alert(myArray.length);
+}
+
+/* Populating an array
+var myArray=[];
+myArray[0]=10;
+
+OR
+
+var arr=[10,20,30]
+
+OR
+
+var arr=new Array(3);
+arr[0]=10;
+
+OR
+
+var arr=new Array(10,20,30)
+
+IF one number passed to array constructor, it is length oth
+erwise it is array elements.
+
+var evenNums=[];
+for(var i=0; i<=5; i++)
+{
+	evenNums[i]=i*2;
+}
+alert(evenNums);
+
+
+push() method: Adds new item to the end of the array. Changes
+the length too.
+
+pop() method: Removes the last element of array, and returns
+that element. Changes length of array.
+
+var arr=[];
+for(var i=0; i<=5; i++){
+	arr.push(i*2);
+}
+
+for(var i=0; i<=5; i++){
+	document.write(arr.pop() + "<br/>");
+}
+
+unshift(): to add element to beginning.
+shift(): to remove from beginning.
+
+
+
+ARRAY MUTATORS: Modify the array object.
+NON MUTATORS: contains, indexOf, lastIndexOf
+
+Mutator methods:
+push, pop, shift, unshift, reverse, sort, splice.
+
+
+sort method: By default sort by converting to strings.
+	works well for strings but not for numbers.
+
+var myArray=["Sam", "Mark", "Tom", "David"];
+myArray.sort(); -> David, Mark, Sam, Tom.
+
+var myArray=[20, 1, 10, 2 , 3];
+myArray.sort(); -> 1,10,2,20,3
+Numbers sorted as strings
+
+Compare functions: returns -,0,+ value.
+var myArray=[20,1,10,2,3];
+myArray.sort(function(a,b){ return a-b});
++ means a>b
+- means a<b
+0 means a=b
+(20, 1) passed, checks a>b, swaps them
+
+To sort in desc:
+return b-a
+OR
+myArray.sort(function(a,b){ return a-b}).reverse();
+
+
+SPLICE METHOD: Add or remove elements from an array.
+array.splice(index, deleteCount, item1, ...., itemX);
+index: Required. specify at what position to add or remove elements.
+deleteCount: Required. Number of items to be removed. IF 0
+	no items will be removed.
+item1,...,itemX: Optional. New item to be added to the array.
+
+var myArray=[1,2,5];
+myArray.splice(2,0,3,4); -> 1,2,3,4,5
+
+var myArray=[1,2,55,67,3];
+myArray.splice(2,2); -> 1,2,3
+
+
+
+ARRAY FILTER METHODS: Populates array with the elements
+that meet the condition specified in a callback function.
+
+var myArray=[1,2,3,4,5,6,7,8,9,10];
+
+function isEven(value, index, array){
+	if (value % 2 == 0) {
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+var result=myArray.filter(isEven);
+
+OR 
+function isEven(value, index, array){
+	return value%2==0;
+}
+
+OR use anonymous function:
+function (value, index, array){
+	return value%2==0;
+}
+
+Pass it to the filter method:
+vvar result=myArray.filter(function (value, index, array){
+	return value%2==0;
+});
+
+
+
+REMOVE DUPLICATES FROM ARRAY:
+var myArray=["Sam", "Mark", "Tim", "Sam"];
+
+var result=myArray.filter(function(value, index, array){
+	return array.indexOf(value) == index;
+});
+//if index returned is same, include in array
+OR filter that out.
+
+
+Two dimensional arrays: JS doesnt have special syntax
+		for creating multi dimensional array. Instead we 
+		create array of arrays.
+
+var myArray=new Array(3);
+for(i=0; i<3; i++)
+	myArray1[i] = new Array(3);
+
+var start=1;
+for(var i=0; i<3; i++){
+	for(var j=0; j<3; j++){
+		myArray[i][j]=start;
+		start=start+1;
+	}
+}
+
+for(var i=0; i<3; i++)
+{
+	for(var j=0; j<3; j++)
+	{
+		document.write(myArray[i][j] + "&emps;");
+	}
+	document.write("<br/>");
+}
+
+Add 2 2D arrays:
+
+
+
+
+
+
+
+
+
+
+
+
+*/

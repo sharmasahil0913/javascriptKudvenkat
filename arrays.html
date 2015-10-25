@@ -1,0 +1,44 @@
+<snippet>
+<content><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>$1</title>
+</head>
+<body>
+
+
+
+	<script>
+		var emptyArray = [];
+		alert(emptyArray.length);
+
+		//another way to create array: Array constructor
+		var myArray=new Array(10);
+		alert(myArray.length);
+
+		var newArray=[10, 20, 30];
+		document.write("First ele:" + newArray[0] + "<br/>");
+		document.write("First ele:" + newArray[newArray.length-1] + "<br/>");
+
+		var result = (function computeFactorial(number){
+		if(number <=1){
+			return 1;
+		}
+		return number*computeFactorial(number-1);
+	})(5);
+
+	document.write(result);
+
+	function computeFactorial(number){
+		if(number <=1){
+			return 1;
+		}
+		return number*computeFactorial(number-1);
+	}
+	document.write(computeFactorial(6));
+
+	</script>
+</body>
+</html>
+</snippet>

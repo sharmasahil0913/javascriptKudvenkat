@@ -1,0 +1,29 @@
+<snippet>
+<content><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>$1</title>
+</head>
+<body>
+	<div id="timeDiv"> </div>
+	<script>
+	getCurrentDateTime();
+		function getCurrentDateTime(){
+			document.getElementById("timeDiv").innerHTML = new Date();
+	}
+	</script>
+
+</body>
+</html>
+</snippet>
+
+
+<!--
+js allows piece of code to be executed at specific time intervals. example every 1 second.
+
+window object has foll. 2 methods:
+setInterval(func, delay)- Execute REPEATEDLY. func specifies name of function to execute, delay specifies the time in ms to wait before calling the specified fn.
+
+setTimeout(func, delay)- execute specified func after waiting a specified number of milliseconds.Delay specify time in milliseconds to wait before calling specified function. The actual wait time(delay) may be longer.
+-->

@@ -1,0 +1,69 @@
+<snippet>
+<content><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>$1</title>
+</head>
+<body>
+	<div id="timeDiv"> </div>
+	<script>
+	getCurrentDateTime();
+		function getCurrentDateTime(){
+			document.getElementById("timeDiv").innerHTML = new Date();
+	}
+
+	setInterval(getCurrentDateTime,1000);
+	</script>
+
+</body>
+</html>
+</snippet>
+
+
+<!--
+js allows piece of code to be executed at specific time intervals. example every 1 second.
+
+window object has foll. 2 methods:
+setInterval(func, delay)- Execute REPEATEDLY. func specifies name of function to execute, delay specifies the time in ms to wait before calling the specified fn.
+
+setTimeout(func, delay)- execute specified func after waiting a specified number of milliseconds.Delay specify time in milliseconds to wait before calling specified function. The actual wait time(delay) may be longer.
+
+clearInterval(intervalID)- Cancels repeated execution of method that was set up using setInterval() method. intervalID is identifier of repeated action you want to cancel. This ID is returned from setInterval() method.
+
+
+
+var intervalID;
+
+function startTimer(controlId){
+	var control = document.getElementByid(controlId);
+	var seconds = control.value;
+
+	seconds = seconds-1;
+
+	if(seconds == 0){
+		control.value="Done";
+		return;
+	}
+	else{
+		control.value=seconds;
+	}
+
+	intervalID = setTimeout(function(){ startTimer("txtBox")}, 1000);
+}
+
+function stopTimer(){
+	clearTimeout(intervalID);
+}
+
+<input type="text" value="10" id="txtBox"/>
+<INPUT type="button" value="Start Timer" onclick="startTimer('txtBox')"/>
+<INPUT type="button" value="Stop Timer" onclick="stopTimer()"/>
+
+
+
+
+
+
+
+-->

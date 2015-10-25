@@ -1,0 +1,150 @@
+/*
+Strings in js
+
+var string1="str1"; //string in double quotes
+var string2='str2'; //string in single quotes
+
+Concatenate:  using + operator
+var result = string1 + " " + string2;
+string1.concat(" ", string2); //can have any number of params
+
+
+To have single quotes inside a string:
+Option1: place entire sting in double quotes, and use single quotes insid string whenever you need them.
+var myString="Welcome to 'Javascript' training";
+
+Option2:If you prefer to keep string in single quotes only: then use escape char
+var myString='Welcome to \'Javascript\' Training';
+
+String functions:
+str.toUpperCase();
+str.toLowerCase();
+str.Length
+str.trim();
+
+Replace strings: Replaces specified value with replacement value and return new string. Does not change the original string.
+var myString = "Hello Javascript";
+var result = myString.replace("Javascript", "World");
+alert(result);
+
+Case sensitive global replacement
+var myString="A Blue bottle with a blue liquid on a blue table";
+var result= myString.replace(/blue/g,"green");
+regex b/w two fwd slashes. letter g specify global replacement.
+case sensitive so Blue not replaced.
+A Blue bottle with a green liquid on a green table"
+
+Case insensitive global replacement:
+var myString="A Blue bottle with a blue liquid on a blue table";
+var result= myString.replace(/blue/gi,"green");
+gi after forward slash indicates global case insensitive replacement.
+
+
+
+Substrings in JS:
+substring()
+substr()
+slice()
+
+substring()
+2 params start and end
+start required specify where to start extraction
+end is optional: if not go till end.
+if start>end, they are swapped internally
+
+
+substr()
+2 params start and count
+start required specify where to start extraction
+count is optional: if not go till end.
+if count is 0 OR negative, empty string returned.
+
+
+slice()
+2 params start and end
+start required specify where to start extraction.
+end optional and specify position where extraction should end.
+char at end position is not included in the substring.
+if end not specified, all chars from start till end are extracted.
+
+substr() does not work on IE8 or earlier.
+
+Diff substr and substring:
+Second param. substring specifies index position where extraction should stop. The character at end position is not included in the substring. in substr() second param is number of chars to return. 
+substr() not work in IE8 or earlier but substring does.
+
+
+slice and substring:
+iF start>stop, substring swaps them which slice does not swap.
+
+indexOf()
+return position of first occurence
+not return -1
+
+var str = "pragim@pragimtech.com"
+var result=str.indexOf("@") //6
+
+var emailPart=str.substring(0, str.indexOf('@'));
+var domainPart=str.substring(str.indexOf('@')+1)
+
+
+lastIndexOf()
+returns position of last occurrence of specified value in a string.
+searches string from the end.
+return -1 if not found.
+
+var url="http://www.csharp-video-tutorials.blogspot.com"
+Get Top Level Domain:
+url.substring(url.lastIndexOf("."));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

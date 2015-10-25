@@ -1,0 +1,33 @@
+<snippet>
+<content><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>$1</title>
+</head>
+<body>
+
+	<script>
+		try{
+			document.write(sayHello());
+			document.write("This line will not be executed");
+		}
+		catch(e){
+			document.write("Message =" + e.message + "<br/>");
+			document.write("Description =" + e.description + "<br/>");
+			document.write("Stack trace =" + e.stack + "<br/>");		
+		}
+		document.write("This line will be executed <br/>");
+	</script>
+
+</body>
+</html>
+</snippet>
+
+<!--
+Use try/catch/finally. r
+runtime errors are exceptions.
+example referencing a variable or method that is not defined.
+
+js statement that can cause exception should be in try block. when it causes exception, control immediately moves to catch block skiping rest of code in the try block.
+-->

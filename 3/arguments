@@ -1,0 +1,42 @@
+<snippet>
+<content><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>$1</title>
+</head>
+<body>
+
+
+
+	<script>
+		function printArguments(){
+			document.write("Arguments Count =" + arguments.length + "<br/>");
+			for(var i=0; i<arguments.length; i++){
+				document.write("Argument" + i + " - " + arguments[i] + "<br/>");
+			}
+		}
+		printArguments();
+		printArguments("A", "B");
+		printArguments("A", "B","C");
+		
+	</script>
+</body>
+</html>
+</snippet>
+
+<!--
+accessing arguments object outside a function is 'arguments' undefined error.
+we index arguments object like an array but it is not an array.
+No array property except length.
+can be converted to array (for example to sort)
+
+var argsArray = Array.prototype.slice.call(arguments);
+OR
+var argsArray = [].slice.call(arguments);
+
+argsArray.sort();
+
+
+
+-->
